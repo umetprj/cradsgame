@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase:{
+    apiKey: "AIzaSyCKh_Vq5oySAnwSC7WdLxyFFrTJhnFyji4",
+    authDomain: "ranking-juego-cartas.firebaseapp.com",
+    projectId: "ranking-juego-cartas",
+    storageBucket: "ranking-juego-cartas.appspot.com",
+    messagingSenderId: "544878923928",
+    appId: "1:544878923928:web:a748d9fbf6a407a115c0ed",
+    measurementId: "G-5Y2CMM4NKD"
+  }
 };
 
 /*

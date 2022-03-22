@@ -1,0 +1,57 @@
+<mat-toolbar color="primary" class="text-center">
+  
+<p class="text-center"> Juego de memoria Selecciona todas las cartas hasta encontrar los pares...</p>
+</mat-toolbar>
+
+<div *ngIf="isInitGame">
+  <p class="text-center">Faltan {{timeLeft}} segundos.....</p>
+</div>
+
+
+<button (click)='startTimer()' pButton pRipple label="Comienza Juego" icon="pi pi-play" class="p-button-success mr-2"></button>
+<!--button (click)='pauseTimer()'pButton pRipple label="Pause Juego" icon="pi pi-stop" class="p-button-success mr-2"></button-->
+
+<br/>
+<br/>
+<br/>
+
+
+
+<div *ngIf="isInitGame; else noInitGame">
+
+  <div *ngIf="isTimeOut; else noTimeOut">
+    Tiempo Terminado Reinicie el juego
+  </div>
+
+  <ng-template #noTimeOut>
+    <div class="p-16">
+      <div class="grid p-16">
+        <app-animacion-carta *ngFor="let c of cartas; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
+        </app-animacion-carta>
+      </div>
+    </div>
+  </ng-template>
+
+</div>
+
+<ng-template #noInitGame>  
+  Presione el boton para iniciar el juego
+</ng-template>
+
+<div *ngIf="isWin">
+  <h2>Felicidades!</h2>
+  <h2>Registra tus logros</h2>
+  <form (ngSubmit)="guardar()">
+
+    <input
+      type="text"
+      placeholder="Nombre"
+      name="nombre"
+      [(ngModel)]="ranking.nombre"
+    />
+
+    <button type="submit">
+      Agregar
+    </button>
+  </form>
+</div>

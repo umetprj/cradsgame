@@ -1,0 +1,29 @@
+{
+	"data": [
+		{
+			"id": "1",
+			"nombre": "Adrian Nieto",
+			"points": "1:30"
+		},
+		{
+			"id": "2",
+			"nombre": "Juan Guevara",
+			"points": "1:50"
+		},
+		{
+			"id": "3",
+			"nombre": "Jose Ordeñez",
+			"points": "1:55"
+		},
+		{
+			"id": "4",
+			"nombre": "Pedro Mosquera",
+			"points": "2:30"
+		},
+		{
+			"id": "5",
+			"nombre": "Xavier Moran",
+			"points": "3:30"
+		}
+    ]
+}
